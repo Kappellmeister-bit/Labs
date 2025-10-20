@@ -1,10 +1,7 @@
 pipeline {
   agent any
-
   stages {
-    stage('Checkout') {
-      steps { checkout scm }
-    }
+    stage('Checkout') { steps { checkout scm } }
 
     stage('Setup venv') {
       steps {
@@ -27,11 +24,7 @@ pipeline {
           python -m pytest -q --junitxml=test-results/junit.xml
         '''
       }
-      post {
-        always {
-          junit 'test-results/junit.xml'
-        }
-      }
+      post { always { junit 'test-results/junit.xml' } }
     }
   }
 }
