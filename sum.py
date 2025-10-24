@@ -1,5 +1,6 @@
 def add(a: int, b: int) -> int:
-    return a + b
+    sum = a + b
+    return sum
 
 if __name__ == "__main__":
     import sys
