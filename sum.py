@@ -1,5 +1,5 @@
 def add(a: int, b: int) -> int:
-    sum = a + b + 0
+    sum = a + b
     return sum
 
 if __name__ == "__main__":
